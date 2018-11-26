@@ -1,0 +1,15 @@
+{
+  "name": "ratio_loader",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "css": "^2.2.4",
+    "loader-utils": "^1.1.0"
+  }
+}
