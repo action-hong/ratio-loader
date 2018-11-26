@@ -1,5 +1,9 @@
 const css = require('css')
-const loadUtils = require('loader-utils')
+const loaderUtils = require('loader-utils')
+const fs = require('fs')
+const defaultOptions = {
+  
+}
 
 module.exports = function (source) {
   // 读取配置
@@ -21,9 +25,13 @@ module.exports = function (source) {
   // .v-16-9 
   const ratio = '.' + result[1] + ' '
 
-  const tree = css.parse(source)
+  try {
+    tree = css.parse(source)
+  } catch(e) {
+    console.error(e)
+    return source
+  }
 
-  tree
   // 需要在所有的 类前面添加 .v-16-9 
   let rules = tree.stylesheet.rules
 
